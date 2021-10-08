@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+
+ul {
+  position: relative;
+  display: flex;
+}
+
+ul li {
+  position: relative;
+  list-style: none;
+  margin: 0 20px;
+  cursor: pointer;
+  width: 100%;
+}
+
+ul li a {
+  text-decoration: none;  
+}
+
+ul li a .fa {
+  font-size: 6em;
+  color: #222;
+}
+
+ul li::before {
+  font-family: fontAwesome;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 6em;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+ul li:nth-child(1)::before {
+  content: '\f09a';
+  background: #1877f2;
+  color: #fff;
+  border-bottom: 4px solid #1877f2;
+}
+
+ul li:nth-child(2)::before {
+  content: '\f16d';
+  background: linear-gradient(45deg, #f7e700 0%, #e80b19 53%, #8243b3 100%);
+  color: #fff;
+  border-bottom: 4px solid #e80b19;  
+}
+
+ul li:nth-child(3)::before {
+  content: '\f0e1';
+  background: #0a66c2;
+  color: #fff;
+  border-bottom: 4px solid #0a66c2;
+}
+
+ul li:nth-child(4)::before {
+  content: '\f232';
+  background: #4fc65a;
+  color: #fff;
+  border-bottom: 4px solid #4fc65a;
+}
+
+ul li:hover::before {
+  height: 100%;
+}
